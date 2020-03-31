@@ -4,7 +4,10 @@
     "pages/mine/mine",
     "pages/info/info",
     "pages/detail/detail",
-    "pages/explain/explain"
+    "pages/explain/explain",
+    "pages/joinasso/joinasso",
+    "pages/createasso/createasso",
+    "pages/assoinfo/assoinfo"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -35,6 +38,5 @@
   },
   "debug": true,
   "navigateToMiniProgramAppIdList": ["wxe5f52902cf4de896"],
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }
