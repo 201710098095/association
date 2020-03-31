@@ -1,0 +1,28 @@
+Page({
+  data:{
+    name:'',
+    type:'',
+    chargePerson:'',
+    date:'',
+    image:'',
+    msg:'',
+    activity:'',
+    recruit:'',
+    sponsor:'',
+    other:''
+  },
+  onLoad:function(options){
+    this.setData({
+      name:options.name,
+      type:options.type,
+      chargePerson:options.chargePerson,
+      date:options.date,
+      image:options.image,
+      msg:options.msg,
+      activity:options.activity,
+      recruit:options.recruit,
+      sponsor:options.sponsor,
+      other:options.other
+    }) 
+  }
+})
