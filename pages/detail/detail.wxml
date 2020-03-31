@@ -1,0 +1,15 @@
+<view class='container'>
+<view class="box">
+<view class="msg">
+<text>社团名称：{{name}}</text>
+<text>社团类型：{{type}}</text>
+<text>社团负责人：{{chargePerson}}</text>
+<text>社团创建日期：{{date}}</text>
+<image src="{{image}}"></image>
+<text>社团基本信息：{{msg}}</text>
+
+<text>社团活动：{{activity}}</text>
+<text>社团招募：{{recruit}}</text>
+<text>社团赞助：{{sponsor}}</text>
+<text>其他说明：{{other}}</text></view></view>
+</view>

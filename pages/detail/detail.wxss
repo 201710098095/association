@@ -1,0 +1,18 @@
+
+.box{
+  width: 95%;
+  background-color: rgba(242, 230, 164, 0.878);
+  border-radius: 10px;
+  box-shadow:1px 1px 5px #333;
+}
+.msg{
+  width: 600rpx;
+  margin:20px;
+}
+text{
+  display: block;
+  font-size: 13px;
+  margin:10px
+ 
+
+}

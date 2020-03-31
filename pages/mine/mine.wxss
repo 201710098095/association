@@ -1,0 +1,56 @@
+/**index.wxss**/
+.container{
+  padding: 0rpx;
+  background-color:rgba(244, 244, 244, 0.316)
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 130px;
+  background-color: #ffa500;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: black;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.info{
+  width: 600rpx;
+  height: 350px;
+  border: 1px solid orange;
+  background-color: white;
+  margin-top: 30px;
+  border-radius:10px ;
+}
+.wrapper{
+  margin:10px;
+  
+}
+.d{
+height: 30px;
+line-height: 30px;
+border-bottom: 1px dashed  rgb(255, 183, 0);
+font-size: 13px;
+margin:8px;
+
+}
+.menu{
+  color: orange;
+  border-bottom: 1px dashed  rgb(255, 183, 0);
+  margin:8px;
+  padding: 5px;
+
+}

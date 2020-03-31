@@ -1,0 +1,18 @@
+<view class='container'>
+<view class="function">
+<view class="title">
+使用帮助
+</view>
+<view class="content">
+<text>“华广社团管理”是一款微信小程序，用于服务华广社团，进行社团信息管理。</text>
+<text>“华广社团管理”功能正在进行完善，若使用过程中遇到问题，欢迎您通过“反馈”提出宝贵意见，我们会努力优化改进！</text>
+<text>小程序功能：所有：浏览社团，修改用户信息。</text>
+<text>学生：申请加入社团，退出社团。</text>
+<text>社团管理：管理社团。</text>
+<text>非常感谢您的使用！祝您生活愉快！</text>
+
+</view>
+
+</view>
+
+</view>
