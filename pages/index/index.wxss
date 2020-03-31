@@ -15,7 +15,7 @@
 .message{
   float: left;
   margin-top: 18px;
-  width: 300rpx;
+  width: 350rpx;
   height: 70px;
   font-size: 13px;
 }
@@ -29,7 +29,6 @@
 icon{
   width: 25px;
   margin-top: 90px;
-  margin-left: 15px;
 }
 text{
   margin: 5px;

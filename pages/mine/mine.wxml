@@ -12,11 +12,11 @@
     <view class="menu">功能</view>
    <view class="d">我加入的社团</view>
    <view class="d">我管理的社团</view>
-   <view class="d">我的用户信息</view>
+   <view class="d"><navigator url="../info/info">我的用户信息</navigator></view>
       <view class="d">开发版本</view>
-       <view class="d">关于小程序</view>
+       <view class="d"><navigator url="../explain/explain">关于小程序</navigator></view>
         <view class="d">设置</view>
-   <view class="d">反馈</view>
+   <view class="d"><navigator url="../explain/explain">反馈</navigator></view>
    </view>
    </view>
 </view>

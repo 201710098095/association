@@ -1,0 +1,25 @@
+.container{
+  background-color: rgba(242, 230, 164, 0.878);
+  
+}
+text{
+  display: block;
+  line-height: 20px;
+}
+.function{
+  width: 600rpx;
+  height: 300px;
+  border-radius: 10px;
+  font-size: 12px;
+  background-color: white;
+}
+.title{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-bottom: 1px dashed orange;
+}
+.content{
+  padding: 10px;
+  text-indent: 2em;
+}
