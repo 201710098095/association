@@ -29,7 +29,6 @@
 
 .info{
   width: 600rpx;
-  height: 750rpx;
   border: 1px solid orange;
   background-color: white;
   box-shadow: 0 0 8rpx orange;

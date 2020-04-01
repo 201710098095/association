@@ -1,0 +1,8 @@
+<!--pages/feedback/feedback.wxml-->
+<view class="container">
+<view class="box">
+<view class="title">反馈内容</view>
+<input class="content" placeholder="提出您的宝贵意见，我们会努力改进！" bindinput='inputFeedback' value='{{feedback}}' />
+</view>
+<button bindtap="submitFeedback">提交</button>
+</view>

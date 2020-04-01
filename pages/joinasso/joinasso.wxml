@@ -10,7 +10,5 @@
   <navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
     <icon type="info" color="orange"></icon>
 </navigator>
- <navigator url="../assoinfo/assoinfo?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
-     <button class="quit">退出社团</button>
-</navigator>
+     <button class="quit" bindtap="quitAsso">退出社团</button>
  </view>

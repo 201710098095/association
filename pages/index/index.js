@@ -1,7 +1,23 @@
 //index.js
 Page({
   data: {
+    isSearch:true,
+    isClear:false,
     association:[
+      {"name":"工商协会",
+      "type":"学术",
+       "chargePerson":"李高",
+       "phone":"15612354512",
+       "date":"2017-01-23",
+       "image":"../../img/shangxie.jpg",
+       "detail":{
+         "msg":"该社团由。。。。。。牛逼哄哄",
+         "activity":"校级活动。。。",
+         "recruit":"19日开始招募",
+         "sponsor":"没有赞助",
+         "other":"妇女节按时发不卡"
+        }
+      },
       {"name":"工商协会",
       "type":"学术",
        "chargePerson":"李高",
@@ -90,7 +106,55 @@ Page({
      }
     }
       
-    ]
-  }
+    ],
+    searchname:'',
+  },
+  onLoad: function () {
+    var that = this; 
+    var data = {
+      "datas": [
+        {
+          "id": 1,
+          "imgurl": "../../img/a1.jpg"
+        },
+        {
+          "id": 2,
+          "imgurl": "../../img/a2.jpg"
+        },
+        {
+          "id": 3,
+          "imgurl": "../../img/a3.jpg"
+        },
+        {
+          "id": 4,
+          "imgurl": "../../img/a4.jpg"
+        }
+      ]
+    }; 
+    that.setData({
+      lunboData: data.datas
+    })
+  },
+  societyInput:function(e){
+    this.setData({
+      searchname:e.detail.value
+    })
+    if(this.data.searchname.length>0){
+      this.setData({
+        isClear:true,
+      })
+    }else{
+      this.setData({
+        isClear:false,
+      })
+    }
+    },
+    clearTap:function(){
+      this.setData({
+         searchname:'',
+         isClear:false,
+      })
+     
+    }
 
 })

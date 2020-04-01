@@ -1,0 +1,27 @@
+/* pages/feedback/feedback.wxss */
+.box{
+  width: 80%;
+  height: 400rpx;
+  border-radius: 15px;
+  border:1px solid orange;
+  box-shadow: 0 0 8rpx orange;
+
+  background-color:white;
+}
+.title{
+  height: 10%;
+  border-bottom:1px dashed orange;
+  font-size: 13px;
+  padding:5px;
+  padding-left: 14px;
+}
+input{
+  font-size: 12px;
+  padding:5px 10px 10px 10px;
+  letter-spacing: 2px;
+}
+button{
+  margin-top: 100rpx;
+  background-color: orange;
+  color: white;
+}

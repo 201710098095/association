@@ -50,5 +50,22 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  getVersion:function(){
+    wx.showModal({      
+      title: '版本信息',      
+      content: '当前版本1.0.0 \n欢迎提出改进意见 \nQQ：839812298',      
+      success: function (e) {       
+         if (e.confirm) {            
+           // 用户点击了确定  
+           //后台请求删除
+           console.log("确定");        
+           } else if (e.cancel) {
+        }        
+      }      
+    });
   }
+
+
 })

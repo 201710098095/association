@@ -6,9 +6,9 @@
 .box{
   height: 170px;
   width: 650rpx;
-  margin: 50rpx;
+  margin:20px;
   font-size: 12px;
-  
+  padding-right: 10px;
   background-color: rgba(242, 230, 164, 0.878);
   border-radius: 10px;
   box-shadow:1px 1px 5px #333;
@@ -42,4 +42,6 @@ text{
   margin-top: 20rpx;
   height: 30px;
   width: 100px;
+  background-color: red;
+  color: white;
 }

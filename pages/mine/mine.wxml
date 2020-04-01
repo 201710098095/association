@@ -9,15 +9,14 @@
   </view>
    <view class="info">
    <view class="wrapper">
-    <view class="menu">功能</view>
+   <view class="menu">功能</view>
    <view class="li"><navigator url="../joinasso/joinasso">我加入的社团</navigator></view>
    <view class="li"><navigator url="../createasso/createasso">我管理的社团</navigator></view>
-      <view class="li">通知</view>
+   <view class="li">通知</view>
    <view class="li"><navigator url="../info/info">我的用户信息</navigator></view>
-      <view class="li">开发版本</view>
-       <view class="li"><navigator url="../explain/explain">关于小程序</navigator></view>
-        <view class="li">设置</view>
-   <view class="li"><navigator url="../explain/explain">反馈</navigator></view>
+   <view class="li" bindtap="getVersion">开发版本</view>
+   <view class="li"><navigator url="../explain/explain">关于小程序</navigator></view>
+   <view class="li"><navigator url="../feedback/feedback">反馈</navigator></view>
    </view>
    </view>
 </view>

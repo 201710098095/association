@@ -7,6 +7,9 @@
     <text>负责人：{{ item.chargePerson }}</text>
     <text>联系电话：{{ item.phone }} </text> 
   </view>
+  <navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
+    <icon type="info" color="orange"></icon>
+</navigator>
  <navigator url="../assoinfo/assoinfo?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
      <button class="set">编辑信息</button>
 </navigator>
