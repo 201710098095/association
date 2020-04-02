@@ -12,7 +12,7 @@
 
 
 <view class="society">
-<input class="input" placeholder="搜索社团" bindinput="societyInput" value="{{searchname}}" />
+<input class="input" placeholder="输入社团名称" bindinput="societyInput" value="{{searchname}}" />
 <navigator url="../search/search?searchname={{searchname}}">
 <icon type="search" class="search" wx:if='{{isSearch}}'></icon>
 </navigator>
