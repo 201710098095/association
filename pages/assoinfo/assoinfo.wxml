@@ -1,44 +1,52 @@
 <!--pages/assoinfo/assoinfo.wxml-->
-<view class='container'>
-<view class="box">
-<view class="ItemView">社团名称：
-<input class="input" placeholder="请输入您的姓名" bindinput="nameInput" value='{{name}}'/>
-</view>
-<view class="ItemView">社团类型：
-<input class="input" placeholder="请输入您的学号" bindinput="idInput" value='{{id}}'/>
-</view>
-<view class="ItemView">社团负责人：
-<input class="input" placeholder="请输入您的学院" bindinput="collegeInput" value='{{college}}'/>
-</view>
-<view class="ItemView">联系方式：
-<input class="input" placeholder="请输入您的专业" bindinput="professionalInput" value='{{professional}}'/>
-</view>
-<view class="ItemView">社团类型：
-<input class="input" placeholder="请输入您的学号" bindinput="idInput" value='{{id}}'/>
-</view>
-
-<view class="ItemView">社团logo：
-<input class="input" placeholder="请输入您的手机号" bindinput="phoneInput" value='{{phone}}'/>
-</view>
-<view class="ItemView">社团简介：
-<input class="input" placeholder="请输入您的手机号" bindinput="phoneInput" value='{{phone}}'/>
-</view>
-<view class="ItemView">社团赞助商：
-<input class="input" placeholder="请输入您的手机号" bindinput="phoneInput" value='{{phone}}'/>
-</view>
-<view class="ItemView">社团招募：
-<input class="input" placeholder="请输入您的手机号" bindinput="phoneInput" value='{{phone}}'/>
-</view>
-<view class="ItemView">社团活动：
-<input class="input" placeholder="请输入您的手机号" bindinput="phoneInput" value='{{phone}}'/>
-</view>
-<view class="ItemView">其他：
-<input class="input" placeholder="请输入您的手机号" bindinput="phoneInput" value='{{phone}}'/>
-</view>
-<view class="viewName">
- <button class="submitBtn" bindtap="submitBtnClick" type="primary" >提交</button>
- <button class="resetBtn" bindtap="resetBtnClick" type="warn" >清除</button>
-</view>
-</view>
-</view>
-
+	<view class="box">
+		<view class="ItemView">
+			<view class="text_ss">社团名称：</view>
+			<input class="input" placeholder="{{name}}" bindinput="nameInput" value='{{name}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss">社团类型：</view>
+			<input class="input" placeholder="{{type}}" bindinput="typeInput" value='{{type}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss"> 社团负责人：</view>
+			<input class="input" placeholder="{{chargePerson}}" bindinput="chargePersonInput" value='{{chargePerson}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss">联系方式：</view>
+			<input class="input" placeholder="{{phone}}" bindinput="phoneInput" value='{{phone}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss">社团创建时间：</view>
+			<input class="input" placeholder="{{date}}" bindinput="dateInput" value='{{date}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss">社团简介：</view>
+			<input class="input" placeholder="{{msg}}" bindinput="msgInput" value='{{msg}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss">社团赞助商：</view>
+			<input class="input" placeholder="{{sponsor}}" bindinput="sponsorInput" value='{{sponsor}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss">社团招募：</view>
+			<input class="input" placeholder="{{recruit}}" bindinput="recruitInput" value='{{recruit}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss">社团活动：</view>
+			<input class="input" placeholder="{{activity}}" bindinput="activityInput" value='{{activity}}' />
+		</view>
+		<view class="ItemView">
+			<view class="text_ss">其他：</view>
+			<input class="input" placeholder="{{other}}" bindinput="otherInput" value='{{other}}' />
+		</view>
+		<view class="logo">
+			<view class="text_ssl">社团logo：</view>
+			<image class="logo_size" src="{{image}}" mode="aspectFit"></image>
+			<view class="logo_css" bindtap="getLogo">+</view>
+		</view>
+		<view class="viewName">
+			<button class="submitBtn" bindtap="submitBtnClick" type="primary">提交</button>
+			<button class="resetBtn" bindtap="resetBtnClick" type="warn">清除</button>
+		</view>
+	</view>

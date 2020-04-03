@@ -12,8 +12,8 @@
   color: rgb(255, 153, 0);
 }
 .box{
-  height: 130px;
-  width: 650rpx;
+  height: 140px;
+  width: 700rpx;
   margin: 20rpx;
   font-size: 12px;
   background-color: rgba(235, 235, 235, 0.878);
@@ -22,27 +22,43 @@
 }
 .message{
   float: left;
-  margin-top: 18px;
-  width: 350rpx;
+  margin-top: 20px;
+  width: 500rpx;
   height: 70px;
   font-size: 13px;
 }
 .logo{
-  width: 60px;
-  height: 60px;
-  margin: 20px ;
-  margin-top: 30px;
+  width: 130rpx;
+  height: 130rpx;
+  margin: 30rpx;
+  margin-top: 65rpx;
   float: left;
 }
 .de{
-  width: 25px;
-  margin-top: 90px;
+  position: relative;
+  width: 50rpx;
+  margin-left:350rpx;
+  top: -25rpx;
+  left: 30rpx;
 }
-text{
-  margin: 5px;
-  display: block;
+.type{
+  display:inline;
+  padding: 3px 5px 3px 5px;
+  line-height: 20px;
+  text-align: center;
+  font-size: 10px;
+  border: 1px solid orange;
+  border-radius: 10px;
+  color: orange;
+}
+.date{
+  display: inline;
 }
 
+text{
+  margin: 6px;
+  display: block;
+}
 
 .society{
   display: flex;
@@ -53,7 +69,6 @@ text{
   margin-top: 10px;
   border: 2px solid rgb(220, 220, 214);
   border-radius: 10px;
-
   width: 730rpx;
 }
 .input{
@@ -70,7 +85,7 @@ text{
   margin-right: 46rpx;
 }
 .clear{
-  margin-right: 12rpx;
+  margin-right: -0rpx;
   float: right;
 
 }

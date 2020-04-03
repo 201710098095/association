@@ -4,5 +4,6 @@
 <view class="title">反馈内容</view>
 <input class="content" placeholder="提出您的宝贵意见，我们会努力改进！" bindinput='inputFeedback' value='{{feedback}}' />
 </view>
-<button bindtap="submitFeedback">提交</button>
+ <button open-type="contact" bindcontact="handleContact" class="kefu">联系客服</button>
+<button class='sub' bindtap="submitFeedback">提交</button>
 </view>

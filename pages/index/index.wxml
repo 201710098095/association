@@ -10,30 +10,25 @@
     </block>
   </swiper>
 
-
 <view class="society">
 <input class="input" placeholder="输入社团名称" bindinput="societyInput" value="{{searchname}}" />
+<icon type="clear" class="clear" wx:if='{{isClear}}' bindtap="clearTap"></icon>
 <navigator url="../search/search?searchname={{searchname}}">
 <icon type="search" class="search" wx:if='{{isSearch}}'></icon>
 </navigator>
-<icon type="clear" class="clear" wx:if='{{isClear}}' bindtap="clearTap"></icon>
-
-
-
 </view>
 <view class="title">社团一览</view>
-
  <view wx:for='{{association}}' wx:key='name' class="box">
  <image  class="logo" src="{{item.image}}"></image>
  <view class="message">
-    <text>名称：{{ item.name }}</text>
-    <text>类型：{{ item.type }}</text>
+    <text class="name">名称：{{ item.name }} <text class="type"> {{ item.type }}</text>
+    </text>
     <text>负责人：{{ item.chargePerson }}</text>
     <text>联系方式：{{ item.phone }} </text> 
-  </view>
+    <text class="date">创立时间：{{ item.date }} </text> 
  <navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
     <icon type="info" color="orange" class="de"></icon>
 </navigator>
+  </view>
  </view>
-
 </view>

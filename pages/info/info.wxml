@@ -3,14 +3,14 @@
 <view class="ItemView">姓名：
 <input class="input" placeholder="请输入您的姓名" bindinput="nameInput" value='{{name}}'/>
 </view>
+<view class="ItemView">学号：
+<input class="input" placeholder="请输入您的学号" bindinput="idInput" value='{{id}}'/>
+</view>
 <view class="ItemView">学院：
 <input class="input" placeholder="请输入您的学院" bindinput="collegeInput" value='{{college}}'/>
 </view>
 <view class="ItemView">专业：
 <input class="input" placeholder="请输入您的专业" bindinput="professionalInput" value='{{professional}}'/>
-</view>
-<view class="ItemView">学号：
-<input class="input" placeholder="请输入您的学号" bindinput="idInput" value='{{id}}'/>
 </view>
 <view class="ItemView">手机：
 <input class="input" placeholder="请输入您的手机号" bindinput="phoneInput" value='{{phone}}'/>

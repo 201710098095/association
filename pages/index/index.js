@@ -4,8 +4,9 @@ Page({
     isSearch:true,
     isClear:false,
     association:[
-      {"name":"工商协会",
-      "type":"学术",
+      //后端接口
+      {"name":"工商管理爱好者协会",
+      "type":"学术科技",
        "chargePerson":"李高",
        "phone":"15612354512",
        "date":"2017-01-23",
@@ -14,8 +15,8 @@ Page({
          "msg":"该社团由。。。。。。牛逼哄哄",
          "activity":"校级活动。。。",
          "recruit":"19日开始招募",
-         "sponsor":"没有赞助",
-         "other":"妇女节按时发不卡"
+         "sponsor":"没助",
+         "other":"双方都是双方都是远古法u覆盖爱上v阿萨双方都是远古法u覆盖爱上v阿萨双方都是远古法u覆盖爱上v阿萨远古法u覆盖爱上v阿萨"
         }
       },
       {"name":"工商协会",
@@ -66,6 +67,8 @@ Page({
       {"name":"街舞协会",
        "chargePerson":"小明",
        "phone":"15612354512",
+       "type":"学术",
+
 
        "date":"2015-12-03",       
        "image":"../../img/shangxie.jpg",
@@ -80,6 +83,8 @@ Page({
       {"name":"街舞协会",
       "chargePerson":"小明",
       "phone":"15612354512",
+      "type":"学术",
+
 
       "date":"2015-12-03",       
       "image":"../../img/shangxie.jpg",
@@ -94,6 +99,8 @@ Page({
      {"name":"街舞协会",
      "chargePerson":"小明",
      "phone":"15612354512",
+     "type":"学术",
+
 
      "date":"2015-12-03",       
      "image":"../../img/shangxie.jpg",
@@ -115,7 +122,7 @@ Page({
       "datas": [
         {
           "id": 1,
-          "imgurl": "../../img/a1.jpg"
+          "imgurl": "../../img/a1.png"
         },
         {
           "id": 2,
@@ -123,7 +130,7 @@ Page({
         },
         {
           "id": 3,
-          "imgurl": "../../img/a3.jpg"
+          "imgurl": "../../img/a3.png"
         },
         {
           "id": 4,
@@ -155,6 +162,11 @@ Page({
          isClear:false,
       })
      
-    }
-
+    },
+    onShareAppMessage: function () {
+      return {
+       title: '华广社团管理',
+       path: '../../pages/index/index'
+      }
+     }
 })

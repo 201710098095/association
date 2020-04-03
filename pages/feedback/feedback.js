@@ -38,7 +38,13 @@ Page({
         duration: 2000     
       })     
     }
-  }
+  },
+  onShareAppMessage: function () {
+    return {
+     title: '华广社团管理',
+     path: '../../pages/feedback/feedback'
+    }
+   }
   
   
 

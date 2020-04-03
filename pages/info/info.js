@@ -69,6 +69,12 @@ Page(
               },
               onLoad: function () {
              
-                }
+                },
+                onShareAppMessage: function () {
+                  return {
+                   title: '华广社团管理',
+                   path: '../../pages/info/info'
+                  }
+                 }
   }
 )

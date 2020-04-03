@@ -1,66 +1,149 @@
 // pages/assoinfo/assoinfo.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+        image:"",
+        name:'',
+        type:'',
+        chargePerson:'',
+        phone:'',
+        date:'',
+        msg:'',
+        activity:'',
+        recruit:'',
+        sponsor:'',
+        other:''
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  nameInput:function (e) {
+    this.setData({
+      name:e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  typeInput:function (e) {
+    this.setData({
+      type:e.detail.value
+    })
+  }, 
+  chargePersonInput:function (e) {
+    this.setData({
+      chargePerson:e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+   phoneInput:function (e) {
+    this.setData({
+      phone:e.detail.value
+    })
+  }, 
+  dateInput:function (e) {
+    this.setData({
+     date:e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+   msgInput:function (e) {
+    this.setData({
+     msg:e.detail.value
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+   sponsorInput:function (e) {
+    this.setData({
+      sponsor:e.detail.value
+    })
   },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  recruitInput:function (e) {
+    this.setData({
+      recruit:e.detail.value
+    })
+  }, 
+  activityInput:function (e) {
+    this.setData({
+      activity:e.detail.value
+    })
   },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  otherInput:function (e) {
+    this.setData({
+      other:e.detail.value
+    })
   },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+ getLogo:function () {
+   var that=this;
+  wx.chooseImage({
+    count: 1, 
+    sizeType: ['original', 'compressed'],
+    sourceType: ['album', 'camera'], 
+    success: function (res) {
+      var tempFilePaths = res.tempFilePaths;
+      that.setData({
+      image:tempFilePaths
+      })
+    }
+  })
+ },
+ onLoad:function(options){
+  this.setData({
+    name:options.name,
+    type:options.type,
+    chargePerson:options.chargePerson,
+    phone:options.phone,
+    date:options.date,
+    image:options.image,
+    msg:options.msg,
+    activity:options.activity,
+    recruit:options.recruit,
+    sponsor:options.sponsor,
+    other:options.other
+  }) 
+},
+submitBtnClick:function(){
+  if(this.data.name.length == 0 || this.data.type.length == 0||this.data.chargePerson.length==0||this.data.activity.length==0
+   || this.data.phone.length == 0 || this.data.date.length == 0||this.data.sponsor.length==0||this.data.other.length==0
+   ||this.data.recruit.length==0||this.data.msg.length==0||this.data.image.length==0
+   ){
+    wx.showToast({
+      title: '输入的信息不能为空',
+      icon: 'none', 
+      duration: 2000     
+    })        
+  }else{
+  this.setData({
+    name:this.data.name,
+    type:this.data.type,
+    chargePerson:this.data.chargePerson,
+    phone:this.data.phone,
+    date:this.data.date,
+    image:this.data.image,
+    msg:this.data.msg,
+    activity:this.data.activity,
+    recruit:this.data.recruit,
+    sponsor:this.data.sponsor,
+    other:this.data.other
+  })
+  //提交给后台
+  wx.showToast({
+    title: '修改成功！',
+    icon: 'none', 
+    duration: 2000,
+  }) 
   }
+  },
+
+  resetBtnClick:function(options){
+  this.setData({
+    name:"",
+    type:"",
+    chargePerson:"",
+    phone:"",
+    date:"",
+    image:"",
+    msg:"",
+    activity:"",
+    recruit:"",
+    sponsor:"",
+    other:""
+  })
+},
+onShareAppMessage: function () {
+  return {
+   title: '华广社团管理',
+   path: '../../pages/assoinfo/assoinfo'
+  }
+ }
 })

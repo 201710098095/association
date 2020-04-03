@@ -1,18 +1,32 @@
 
+.container{
+  padding: 0;
+}
 .box{
-  width: 95%;
-  background-color: rgba(242, 230, 164, 0.878);
+  width: 90%;
+  background-color: rgb(232, 232, 232);
   border-radius: 10px;
   box-shadow:1px 1px 5px #333;
 }
+image{
+  width: 350rpx;
+  height: 350rpx;
+}
 .msg{
   width: 600rpx;
+  margin:40rpx;
+}
+.name{
+  font-size: 35rpx;
+  font-weight: bold;
+  text-align: center;
   margin:20px;
 }
 text{
   display: block;
-  font-size: 13px;
-  margin:10px
- 
-
+  font-size: 26rpx;
+  line-height: 50rpx;
+}
+button{
+  margin:15px;
 }
