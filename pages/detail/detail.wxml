@@ -16,5 +16,5 @@
 <text>社团赞助：{{sponsor}}</text>
 <text>其他说明：{{other}}</text></view>
 <!-- 通知后台加入社团 -->
-<button type="primary" bindtap="joinAsso">加入社团</button></view>
+<button type="primary" bindtap="joinAsso" data-name='{{name}}'>加入社团</button></view>
 </view>

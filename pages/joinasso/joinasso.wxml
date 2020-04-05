@@ -1,14 +1,15 @@
 <!--pages/joinasso/joinasso.wxml-->
+<view class="title">我加入的社团</view>
 <view wx:for='{{association}}' wx:key='name' class="box">
- <image  class="logo" src="{{item.image}}"></image>
- <view class="message">
-    <text>名称：{{ item.name }}</text>
-    <text>类型：{{ item.type }}</text>
-    <text>负责人：{{ item.chargePerson }}</text>
-    <text>联系电话：{{ item.phone }} </text> 
-  </view>
-  <navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
-    <icon type="info" color="orange"></icon>
-</navigator>
-     <button class="quit" bindtap="quitAsso">退出社团</button>
- </view>
+	<image class="logo" src="{{item.image}}"></image>
+	<view class="message">
+		<text>名称：{{ item.name }}</text>
+		<text>类型：{{ item.type }}</text>
+		<text>负责人：{{ item.chargePerson }}</text>
+		<text>联系电话：{{ item.phone }} </text>
+	</view>
+	<navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
+		<icon type="info" color="orange"></icon>
+	</navigator>
+	<button class="quit" bindtap="quitAsso" data-item="{{item}}">退出社团</button>
+</view>

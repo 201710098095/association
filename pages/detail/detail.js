@@ -1,16 +1,16 @@
 Page({
   data:{
-    name:'',
-    type:'',
-    chargePerson:'',
-    phone:'',
-    date:'',
-    image:'',
-    msg:'',
-    activity:'',
-    recruit:'',
-    sponsor:'',
-    other:''
+    name:'',//社团名字
+    type:'',//类型
+    chargePerson:'',//会长
+    phone:'',//联系方式
+    date:'',//建立日期
+    image:'',//logo
+    msg:'',//简介
+    activity:'',//近期活动
+    recruit:'',//招募
+    sponsor:'',//赞助
+    other:''//其他
   },
   onLoad:function(options){
     this.setData({
@@ -41,20 +41,30 @@ Page({
          if (e.confirm) {            
            // 用户点击了确定  发出后台请求
            console.log("确定");   
-           //通知用户
-           wx.showModal({      
-            title: '提示',      
-            content: '您已成功发出申请！',      
-            success: function (e) {       
-               if (e.confirm) {            
-                 console.log("确定");        
-                 } else if (e.cancel) {
-              }        
-            }      
-          });     
-           } else if (e.cancel) {
-        }        
-      }      
-    });
-  },
+            wx.request({
+            url: 'url', 
+            data: "name",//传用户名申请加入社团
+            dataType: 'json',
+            method: 'POST',
+              header: {
+             'custom-header': 'delete',
+              'content-type': 'application/json'
+              },
+              success: (res) => {
+                //申请成功
+                wx.showModal({      
+                  title: '提示',      
+                  content: '您已成功发出申请！',      
+                  success: function (e) {       
+                     if (e.confirm) {            
+                       console.log("确定");        
+                       }      
+                  }      
+              })
+            },
+            fail: (res) => {
+              console.log('错误');
+            }
+   })
+  }}})}
 })

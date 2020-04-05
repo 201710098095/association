@@ -1,0 +1,11 @@
+<!--pages/memberlist/memberlist.wxml-->
+
+<view class="container">
+      <view class="box">
+        <view wx:for='{{member}}' wx:key='name' class="message">
+          <text class="name">{{item.name}}</text>
+          <view class="remove">删除</view>
+          <view class="edit">操作</view>
+        </view> 
+      </view>   
+</view>

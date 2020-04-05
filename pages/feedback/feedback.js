@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    feedback:'',
+    feedback: '',
 
   },
 
@@ -15,38 +15,38 @@ Page({
   onShareAppMessage: function () {
 
   },
-  inputFeedback:function(e){
+  inputFeedback: function (e) {
     this.setData({
-      feedback:e.detail.value
+      feedback: e.detail.value
     })
   },
-  submitFeedback:function(){
-    if(this.data.feedback.length<=0){
+  submitFeedback: function () {
+    if (this.data.feedback.length <= 0) {
       wx.showToast({
         title: '输入的信息不能为空',
-        icon: 'none', 
-        duration: 2000     
-      })     
-    }else{
-    this.setData({
-      feedback:this.data.feedback,
+        icon: 'none',
+        duration: 2000
+      })
+    } else {
+      this.setData({
+        feedback: this.data.feedback,
       })
       //提交给后台
       wx.showToast({
         title: '提交成功',
-        icon: 'success', 
-        duration: 2000     
-      })     
+        icon: 'success',
+        duration: 2000
+      })
     }
   },
   onShareAppMessage: function () {
     return {
-     title: '华广社团管理',
-     path: '../../pages/feedback/feedback'
+      title: '华广社团管理',
+      path: '../../pages/feedback/feedback'
     }
-   }
-  
-  
+  }
 
- 
+
+
+
 })

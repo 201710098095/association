@@ -1,47 +1,64 @@
 /* pages/joinasso/joinasso.wxss */
-.container{
+.container {
   padding: 0rpx;
-  background-color:rgba(244, 244, 244, 0.652);
+  background-color: rgba(244, 244, 244, 0.652);
 }
-.box{
+
+.box {
   height: 170px;
   width: 650rpx;
-  margin:20px;
+  margin: 20px;
   font-size: 12px;
   padding-right: 10px;
   background-color: rgba(242, 230, 164, 0.878);
   border-radius: 10px;
-  box-shadow:1px 1px 5px #333;
+  box-shadow: 1px 1px 5px #333;
 }
-.message{
+
+.message {
   float: left;
   margin-top: 18px;
   width: 350rpx;
   height: 65px;
   font-size: 13px;
 }
-.logo{
+
+.logo {
   width: 60px;
   height: 60px;
-  margin: 20px ;
+  margin: 20px;
   margin-top: 30px;
   float: left;
 }
-icon{
+
+icon {
   width: 25px;
   margin-top: 90px;
 }
-text{
+
+text {
   margin: 5px;
   display: block;
 }
-.set{
+
+.set {
   float: right;
   font-size: 13px;
-  margin-right: 100rpx;
+  margin-right: 80rpx;
   margin-top: 20rpx;
   height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 10px;
   width: 100px;
+  background-color: orange;
+  color: white;
+}
+
+.title {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
   background-color: orange;
   color: white;
 }

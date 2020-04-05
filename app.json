@@ -8,9 +8,8 @@
     "pages/joinasso/joinasso",
     "pages/createasso/createasso",
     "pages/assoinfo/assoinfo",
-    "pages/feedback/feedback"
-
-
+    "pages/feedback/feedback",
+    "pages/memberlist/memberlist"
   ],
   "window": {
     "backgroundTextStyle": "light",

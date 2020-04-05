@@ -1,53 +1,59 @@
 /* pages/assoinfo/assoinfo.wxss */
-.ItemView{
+.ItemView {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  margin-top:20px;
+  margin-top: 20px;
   border-radius: 2px;
-  box-shadow:1px 1px 1px #333;
+  box-shadow: 1px 1px 1px #333;
 }
-.viewName{
+
+.viewName {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  background-color:rgba(244, 244, 244, 0.652);
+  background-color: rgba(244, 244, 244, 0.652);
   margin-top: 40rpx;
 }
 
-.box{
+.box {
   width: 95%;
   background-color: white;
   border-radius: 10px;
-  padding:20px;
+  padding: 20px;
   font-size: 13px;
-  box-shadow:1px 1px 5px #333;
+  box-shadow: 1px 1px 5px #333;
 }
-.container
-{
-  background-color:rgba(242, 230, 164, 0.878);
+
+.container {
+  background-color: rgba(242, 230, 164, 0.878);
 }
-page{
+
+page {
   height: 100%;
 }
-.logo_css{
+
+.logo_css {
   font-size: 100rpx;
   line-height: 1;
   color: gainsboro;
   margin-left: 190px;
 
 }
-.logo_size{
+
+.logo_size {
   width: 160px;
   margin-left: 60px;
-  height:160px ;
+  height: 160px;
 }
-.text_ssl{
+
+.text_ssl {
   margin-top: 10px;
 
 }
-.input{
-    color:gray;
+
+.input {
+  color: gray;
 }

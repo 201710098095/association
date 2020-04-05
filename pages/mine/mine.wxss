@@ -1,8 +1,9 @@
 /**index.wxss**/
-.container{
+.container {
   padding: 0rpx;
-  background-color:rgba(244, 244, 244, 0.316)
+  background-color: rgba(244, 244, 244, 0.316)
 }
+
 .userinfo {
   display: flex;
   flex-direction: column;
@@ -27,31 +28,33 @@
   margin-top: 200px;
 }
 
-.info{
+.info {
   width: 600rpx;
   border: 1px solid orange;
   background-color: white;
   box-shadow: 0 0 8rpx orange;
   margin-top: 30px;
-  border-radius:10px ;
+  border-radius: 10px;
 }
-.wrapper{
-  margin:10px;
-  
-}
-.li{
-height: 30px;
-line-height: 30px;
-border-bottom: 1px dashed  rgb(255, 183, 0);
-font-size: 13px;
-margin:8px;
+
+.wrapper {
+  margin: 10px;
 
 }
-.menu{
+
+.li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px dashed rgb(255, 183, 0);
+  font-size: 13px;
+  margin: 8px;
+
+}
+
+.menu {
   color: orange;
-  border-bottom: 1px dashed  rgb(255, 183, 0);
-  margin:8px;
+  border-bottom: 1px dashed rgb(255, 183, 0);
+  margin: 8px;
   padding: 5px;
 
 }
-

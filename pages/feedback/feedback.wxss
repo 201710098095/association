@@ -1,31 +1,34 @@
 /* pages/feedback/feedback.wxss */
-.box{
+.box {
   width: 80%;
   height: 400rpx;
   border-radius: 15px;
-  border:1px solid orange;
+  border: 1px solid orange;
   box-shadow: 0 0 8rpx orange;
-
-  background-color:white;
+  background-color: white;
 }
-.title{
+
+.title {
   height: 10%;
-  border-bottom:1px dashed orange;
+  border-bottom: 1px dashed orange;
   font-size: 13px;
-  padding:5px;
+  padding: 5px;
   padding-left: 14px;
 }
-input{
+
+input {
   font-size: 12px;
-  padding:5px 10px 10px 10px;
+  padding: 5px 10px 10px 10px;
   letter-spacing: 2px;
 }
-button{
+
+button {
   margin-top: 50rpx;
   background-color: orange;
   color: white;
 }
-.kefu{
+
+.kefu {
   background-color: orange;
- 
+
 }
