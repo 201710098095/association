@@ -22,6 +22,17 @@ Page({
     }]
 
   },
+  onLoad: function () {
+    wx.request({
+      url: 'url',
+      success: (res) => {
+        that.setData({
+          //管理的社团数据填充
+          association: res.data.association
+        })
+      }
+    })
+  },
   onShareAppMessage: function () {
     return {
       title: '华广社团管理',

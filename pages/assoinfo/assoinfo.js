@@ -64,7 +64,7 @@ Page({
     })
   },
   getLogo: function () {
-    //  var that=this;
+     var that=this;
     wx.chooseImage({
       count: 1,
       sizeType: ['original', 'compressed'],

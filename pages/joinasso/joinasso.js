@@ -37,6 +37,17 @@ Page({
       }
     ]
   },
+  onLoad: function () {
+    wx.request({
+      url: 'url',
+      success: (res) => {
+        that.setData({
+          //加入的社团数据填充
+          association: res.data.association
+        })
+      }
+    })
+  },
 
   quitAsso: function (e) {
     var item = e.currentTarget.dataset.item

@@ -16,7 +16,9 @@
 			<view class="li">
 				<navigator url="../createasso/createasso">我管理的社团</navigator>
 			</view>
-			<view class="li">通知</view>
+			<view class="li">
+			<navigator url="../newasso/newasso">新建社团</navigator>
+			</view>
 			<view class="li">
 				<navigator url="../info/info">我的用户信息</navigator>
 			</view>

@@ -17,7 +17,7 @@
 			<icon type="search" class="search" wx:if='{{isSearch}}'  bindtap="searching" data-searchname='{{searchname}}'></icon>
 		</navigator>
 	</view>
-	<view class="title">社团一览</view>
+	<view class="title"></view>
 	<view wx:for='{{association}}' wx:key='name' class="box">
 		<image class="logo" src="{{item.image}}"></image>
 		<view class="message">

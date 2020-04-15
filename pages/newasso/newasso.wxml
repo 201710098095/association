@@ -1,0 +1,53 @@
+<!--pages/newasso/newasso.wxml-->
+<!--pages/assoinfo/assoinfo.wxml-->
+<view class="box">
+	<view class="ItemViewf">
+		<view class="text_ss">社团名称：</view>
+		<input class="input" placeholder="请输入社团名称" bindinput="nameInput" value='{{name}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss">社团类型：</view>
+		<input class="input" placeholder="请输入社团类型" bindinput="typeInput" value='{{type}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss"> 社团负责人：</view>
+		<input class="input" placeholder="请输入社团负责人" bindinput="chargePersonInput" value='{{chargePerson}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss">联系方式：</view>
+		<input class="input" placeholder="请输入联系方式" bindinput="phoneInput" value='{{phone}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss">社团创建时间：</view>
+		<input class="input" placeholder="请输入社团创建日期" bindinput="dateInput" value='{{date}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss">社团简介：</view>
+		<input class="input" placeholder="请输入社团简介" bindinput="msgInput" value='{{msg}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss">社团赞助商：</view>
+		<input class="input" placeholder="请输入社团赞助商" bindinput="sponsorInput" value='{{sponsor}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss">社团招募：</view>
+		<input class="input" placeholder="请输入社团招募信息" bindinput="recruitInput" value='{{recruit}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss">社团活动：</view>
+		<input class="input" placeholder="请输入社团活动信息" bindinput="activityInput" value='{{activity}}' />
+	</view>
+	<view class="ItemView">
+		<view class="text_ss">其他：</view>
+		<input class="input" placeholder="请输入其他补充" bindinput="otherInput" value='{{other}}' />
+	</view>
+	<view class="logo">
+		<view class="text_ssl">社团logo：</view>
+		<image class="logo_size" src="{{image}}" mode="aspectFit"></image>
+		<view class="logo_css" bindtap="getLogo">+</view>
+	</view>
+	<view class="viewName">
+		<button class="submitBtn" bindtap="submitBtnClick" type="primary">提交</button>
+		<button class="resetBtn" bindtap="resetBtnClick" type="warn">清除</button>
+	</view>
+</view>

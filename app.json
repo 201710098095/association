@@ -9,7 +9,9 @@
     "pages/createasso/createasso",
     "pages/assoinfo/assoinfo",
     "pages/feedback/feedback",
-    "pages/memberlist/memberlist"
+    "pages/memberlist/memberlist",
+    "pages/newasso/newasso"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

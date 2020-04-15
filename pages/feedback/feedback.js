@@ -1,20 +1,12 @@
 // pages/feedback/feedback.js
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     feedback: '',
-
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  },
   inputFeedback: function (e) {
     this.setData({
       feedback: e.detail.value
@@ -28,10 +20,8 @@ Page({
         duration: 2000
       })
     } else {
-      this.setData({
-        feedback: this.data.feedback,
-      })
-      //提交给后台
+      console.log(this.data)
+      //提交反馈数据给后台
       wx.showToast({
         title: '提交成功',
         icon: 'success',

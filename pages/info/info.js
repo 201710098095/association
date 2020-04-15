@@ -41,14 +41,8 @@ Page({
         duration: 2000
       })
     } else {
-      this.setData({
-        username: this.data.username,
-        college: this.data.college,
-        professional: this.data.professional,
-        phone: this.data.phone,
-        id: this.data.id
-      })
-      //提交给后台
+      console.log(this.data)
+      //提交用户信息数据给后台
       wx.showToast({
         title: '添加成功！',
         icon: 'none',

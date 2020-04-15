@@ -1,0 +1,52 @@
+/* pages/newasso/newasso.wxss */
+Page{
+  background-color: rgb(238, 238, 238);
+  font-size: 13px;
+
+}
+.ItemViewf{
+  margin-top: 20px;
+  margin-bottom: 10px;
+
+}
+.ItemView{
+  margin-bottom: 10px;
+}
+
+.text_ss{
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+input{
+  background-color: white;
+  height: 25px;
+  padding:5px;
+  padding-left: 15px;
+
+
+}
+.logo{
+  padding-left: 10px;
+
+
+}
+.logo_css {
+  font-size: 100rpx;
+  line-height: 1;
+  color: gainsboro;
+  margin-left: 190px;
+
+}
+
+.logo_size {
+  width: 160px;
+  margin-left: 60px;
+  height: 160px;
+}
+button{
+  margin-top: 20px;
+}
+.resetBtn{
+  margin-bottom: 20px;
+}
