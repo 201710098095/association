@@ -1,30 +1,22 @@
 // pages/createasso/createasso.js
-Page({
+const app = getApp();
 
+Page({
   /**
    * 页面的初始数据
    */
   data: {
-    association: [{
-      "name": "工商协会",
-      "type": "学术",
-      "chargePerson": "李高",
-      "date": "2017-01-23",
-      "phone": "1523662626",
-      "image": "../../img/shangxie.jpg",
-      "detail": {
-        "msg": "该社团由。。。。。。牛逼哄哄",
-        "activity": "校级活动。。。",
-        "recruit": "19日开始招募",
-        "sponsor": "没有赞助",
-        "other": "妇女节按时发不卡"
-      }
-    }]
-
+    userid:"",
+    association: []
   },
   onLoad: function () {
+    this.setData({
+      userid:app.globalData.stuInfo.id
+    })
+    console.log(this.data.userid);
+    //根据学生id获取管理的社团数据
     wx.request({
-      url: 'url',
+      url: 'associatation'+this.data.userid,
       success: (res) => {
         that.setData({
           //管理的社团数据填充

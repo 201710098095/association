@@ -34,7 +34,13 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: [],
+    stuInfo:{
+    username: '122',
+    college: '1212',
+    professional: '1221',
+    id: '212',
+    phone: '1221'}
   },
   
 })

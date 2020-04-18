@@ -81,7 +81,7 @@ Page({
       ]
     };
     wx.request({
-      url: 'url',
+      url: 'association/listassociation',
       success: (res) => {
         that.setData({
           //列表数据填充

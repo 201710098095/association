@@ -1,11 +1,12 @@
+const app = getApp();
 Page({
   data: {
     //后台返回的信息数组填充
-    username: "",
+    stuInfo:{ username: "",
     college: "",
     id: "",
     professional: "",
-    phone: ""
+    phone: ""}
   },
   nameInput: function (e) {
     this.setData({
@@ -61,22 +62,13 @@ Page({
     })
   },
   onLoad: function () {
-    var _this = this;
-    wx.request({
-      url: 'xxxxxxx',
-      /*写地址*/
-      success: function (res) {
-        console.log(res);
-        _this.setData({
-          username: res.data.username,
-          id: res.data.id,
-          college: res.data.college,
-          professional: res.data.professional,
-          phone: res.data.phone
-        })
-      }
-    })
+    this.setData({
+      stuInfo: app.globalData.stuInfo
+   });
+   console.log(this.data.stuInfo);
+   //有用户数据了但是没有填到里面
   },
+  
   onShareAppMessage: function () {
     return {
       title: '华广社团管理',

@@ -23,6 +23,7 @@ Page({
       type: e.detail.value
     })
   },
+
   chargePersonInput: function (e) {
     this.setData({
       chargePerson: e.detail.value
@@ -91,21 +92,8 @@ Page({
       sponsor: options.sponsor,
       other: options.other
     })
-    console.log(this.data.name)
+    console.log(this.data)
   },
-
-
-
-
-
-
-
-
-
-
-
-
-
 
   submitBtnClick: function () {
     console.log(this.data.name)
