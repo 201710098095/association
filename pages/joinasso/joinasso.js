@@ -7,7 +7,21 @@ Page({
    */
   data: {
     userid:'',
-    association: [],
+    association: [
+      {
+        image: "",
+        name: 'dsf',
+        type: 'dsfsopl',
+        chargePerson: 'sdfoo',
+        phone: 'fdsfo',
+        date: 'fdsfddwe',
+        msg: 'fds',
+        activity: 'sdffq',
+        recruit: 'sdffsd',
+        sponsor: 'dsff',
+        other: 'dsff'
+    },
+    ],
   },
   onLoad: function () {
     this.setData({
@@ -49,8 +63,6 @@ Page({
             success: (res) => {
               //删除成功
               //更新列表
-
-
             },
             fail: (res) => {
 

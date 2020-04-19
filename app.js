@@ -34,7 +34,9 @@ App({
     })
   },
   globalData: {
+ 
     userInfo: [],
+   //学生信息
     stuInfo:{
     username: '122',
     college: '1212',
@@ -42,5 +44,6 @@ App({
     id: '212',
     phone: '1221'}
   },
+  
   
 })

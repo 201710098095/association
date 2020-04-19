@@ -7,13 +7,27 @@ Page({
    */
   data: {
     userid:"",
-    association: []
+    association: [
+      {
+        image: "",
+        name: 'dsf',
+        type: 'dsfsopl',
+        chargePerson: 'sdfoo',
+        phone: 'fdsfo',
+        date: 'fdsfddwe',
+        msg: 'fds',
+        activity: 'sdffq',
+        recruit: 'sdffsd',
+        sponsor: 'dsff',
+        other: 'dsff'
+    },
+    ]
   },
   onLoad: function () {
     this.setData({
       userid:app.globalData.stuInfo.id
     })
-    console.log(this.data.userid);
+    console.log(this.data.association);
     //根据学生id获取管理的社团数据
     wx.request({
       url: 'associatation'+this.data.userid,

@@ -8,13 +8,13 @@
 		<text>负责人：{{ item.chargePerson }}</text>
 		<text>联系电话：{{ item.phone }} </text>
 	</view>
-	<navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
+	<navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.msg}}&activity={{item.activity}}&recruit={{item.recruit}}&sponsor={{item.sponsor}}&other={{item.other}}">
 		<icon type="info" color="orange"></icon>
 	</navigator>
-	<navigator url="../assoinfo/assoinfo?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
+	<navigator url="../assoinfo/assoinfo?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.msg}}&activity={{item.activity}}&recruit={{item.recruit}}&sponsor={{item.sponsor}}&other={{item.other}}">
 		<view class="set">编辑信息</view>
 	</navigator>
-	<navigator url="../memberlist/memberlist?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.detail.msg}}&activity={{item.detail.activity}}&recruit={{item.detail.recruit}}&sponsor={{item.detail.sponsor}}&other={{item.detail.other}}">
+	<navigator url="../memberlist/memberlist?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.msg}}&activity={{item.activity}}&recruit={{item.recruit}}&sponsor={{item.sponsor}}&other={{item.other}}">
 		<view class="set">管理成员</view>
 	</navigator>
 </view>

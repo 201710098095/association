@@ -26,6 +26,20 @@ Page({
       },
     ]
   },
+  remove:function (e) {
+       console.log(e.target.dataset);//学生名
+       wx.request({
+        url: 'associatation',
+        //传名称
+        data:{
+          name:e.target.dataset
+        },
+        success: (res) => {
+          //删除成功
+        }
+      })
+  },
+ 
   onLoad: function () {
   wx.request({
     url: 'url',

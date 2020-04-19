@@ -96,7 +96,7 @@ Page({
   },
 
   submitBtnClick: function () {
-    console.log(this.data.name)
+    console.log(this.data)
     if (this.data.name.length == 0 || this.data.type.length == 0 || this.data.chargePerson.length == 0 || this.data.activity.length == 0 ||
       this.data.phone.length == 0 || this.data.date.length == 0 || this.data.sponsor.length == 0 || this.data.other.length == 0 ||
       this.data.recruit.length == 0 || this.data.msg.length == 0 || this.data.image.length == 0
