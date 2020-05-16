@@ -1,4 +1,12 @@
 <!--pages/assoinfo/assoinfo.wxml-->
+<!-- 日期过滤器 -->
+<wxs module="m1">
+  function format(ts) {
+    var d = getDate(ts)
+    return [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-')
+  }
+  module.exports.format = format
+</wxs>
 <view class="box">
 	<view class="ItemView">
 		<view class="text_ss">社团名称：</view>
@@ -10,7 +18,7 @@
 	</view>
 	<view class="ItemView">
 		<view class="text_ss"> 社团负责人：</view>
-		<input class="input" placeholder="{{chargePerson}}" bindinput="chargePersonInput" value='{{chargePerson}}' />
+		<input class="input" placeholder="{{chargePersons}}" bindinput="chargePersonInput" value='{{chargePersons}}' disabled/>
 	</view>
 	<view class="ItemView">
 		<view class="text_ss">联系方式：</view>

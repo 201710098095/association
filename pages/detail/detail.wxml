@@ -1,3 +1,11 @@
+<!-- 日期过滤器 -->
+<wxs module="m1">
+  function format(ts) {
+    var d = getDate(ts)
+    return [d.getFullYear(), d.getMonth()+1, d.getDate()].join('-')
+  }
+  module.exports.format = format
+</wxs>
 <view class='container'>
 <image src="{{image}}"></image>
 <view class="box">
@@ -7,9 +15,9 @@
 <text class="name">{{name}}</text>
 <text>社团简介：{{msg}}</text>
 <text>类型：{{type}}</text>
-<text>会长：{{chargePerson}}</text>
+<text>会长：{{chargePersons}}</text>
 <text>联系电话：{{phone}}</text>
-<text>创建日期：{{date}}</text>
+<text>创建日期：{{ m1.format(date)}}</text>
 
 <text>近期活动：{{activity}}</text>
 <text>招募信息：{{recruit}}</text>

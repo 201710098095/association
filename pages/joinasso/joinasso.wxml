@@ -5,10 +5,10 @@
 	<view class="message">
 		<text>名称：{{ item.name }}</text>
 		<text>类型：{{ item.type }}</text>
-		<text>负责人：{{ item.chargePerson }}</text>
+		<text>负责人：{{ item.chargePersons }}</text>
 		<text>联系电话：{{ item.phone }} </text>
 	</view>
-	<navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePerson={{item.chargePerson}}&date={{item.date}}&image={{item.image}}&msg={{item.msg}}&activity={{item.activity}}&recruit={{item.recruit}}&sponsor={{item.sponsor}}&other={{item.other}}">
+	<navigator url="../detail/detail?name={{item.name}}&type={{item.type}}&phone={{item.phone}}&chargePersons={{item.chargePersons}}&date={{item.date}}&image={{item.image}}&msg={{item.msg}}&activity={{item.activity}}&recruit={{item.recruit}}&sponsor={{item.sponsor}}&other={{item.other}}">
 		<icon type="info" color="orange"></icon>
 	</navigator>
 	<button class="quit" bindtap="quitAsso" data-item="{{item}}">退出社团</button>

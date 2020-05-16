@@ -5,52 +5,41 @@ Page({
    * 页面的初始数据
    */
   data:  //成员列表 
-  {
-    member:[
-      //后台请求
-      {
-        name:'张三'
-      },
-      {
-        name:'李四'
-      },
-      {
-        name:'王五'
-      },
-      {
-        name:'张三'
-      }, {
-        name:'张三'
-      }, {
-        name:'张三'
-      },
-    ]
+  {assocaitionName:'',
+    member:[]
   },
   remove:function (e) {
-       console.log(e.target.dataset);//学生名
+       console.log(e.target.dataset.name);//学生名
        wx.request({
-        url: 'associatation',
+        url: 'http://localhost:8080/user/deletemember',
         //传名称
         data:{
-          name:e.target.dataset
+          assocaitionName:this.data.assocaitionName,
+          memberName:e.target.dataset.name
         },
         success: (res) => {
           //删除成功
+          console.log(res);
         }
       })
   },
  
-  onLoad: function () {
+  onLoad: function (options) {
+    var that = this;
+    this.setData({
+      assocaitionName: options.name
+    })    
+    console.log(this.data.assocaitionName);
+    //发送后台请求显示成员
   wx.request({
-    url: 'url',
+    url: 'http://localhost:8080/user/associtionname',
+    data:{name:this.data.assocaitionName},
     success: (res) => {
       that.setData({
         //成员数据填充
-        member: res.data.member
+      member: res.data.data
       })
     }
   })
 }
-
-
 })

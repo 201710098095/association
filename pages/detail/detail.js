@@ -2,7 +2,7 @@ Page({
   data:{
     name:'',//社团名字
     type:'',//类型
-    chargePerson:'',//会长
+    chargePersons:'',//会长
     phone:'',//联系方式
     date:'',//建立日期
     image:'',//logo
@@ -16,7 +16,7 @@ Page({
     this.setData({
       name:options.name,
       type:options.type,
-      chargePerson:options.chargePerson,
+      chargePersons:options.chargePersons,
       phone:options.phone,
       date:options.date,
       image:options.image,

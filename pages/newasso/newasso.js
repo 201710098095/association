@@ -7,7 +7,7 @@ Page({
       type: '1',
       chargePerson: '1',
       phone: '1',
-      date: '1',
+      date: '2017-02-08',
       msg: '1',
       activity: '1',
       recruit: '1',
@@ -60,10 +60,22 @@ Page({
         console.log(this.data.association);   
       //提交数据给后台
       wx.request({
-        url: 'url', 
-        data: this.data.association,//传社团信息
+        url: 'http://localhost:8080/association/insert',        
         dataType: 'json',
-        method: 'POST',
+        method:'GET',
+        data:{
+          name:this.data.association.name,
+          chargePersons:this.data.association.chargePersons,
+          phone:this.data.association.phone,
+          date:this.data.association.date,
+          type:this.data.association.type,
+          msg:this.data.association.msg,
+          image:this.data.association.image,
+          activity:this.data.association.activity,
+          recruit:this.data.association.recruit,
+          sponsor:this.data.association.sponsor,
+          other:this.data.association.other,
+        },
         success: (res) => {
             //申请成功
           wx.showToast({
@@ -71,6 +83,12 @@ Page({
             icon: 'none',
             duration: 2000
           })
+          console.log(res);
+          
+        },
+        fail:(res)=>{
+          console.log('错误');
+          
         }
     })
   }

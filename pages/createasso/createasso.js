@@ -24,18 +24,25 @@ Page({
     ]
   },
   onLoad: function () {
-    this.setData({
-      userid:app.globalData.stuInfo.id
-    })
-    console.log(this.data.association);
+    // this.setData({
+    //   userid:app.globalData.stuInfo.id
+    // })
+    // console.log(this.data.association);
     //根据学生id获取管理的社团数据
     wx.request({
-      url: 'associatation'+this.data.userid,
+      url: 'http://localhost:8080/association/ListAssociationByChargeName',
+      data:{chaegePresons:'张三'},//用户名称
       success: (res) => {
-        that.setData({
+        this.setData({
           //管理的社团数据填充
-          association: res.data.association
+          association: res.data.data
         })
+        console.log(res);
+      },
+      fail:(res)=>{
+        console.log(res);
+        console.log('错误');
+
       }
     })
   },

@@ -2,7 +2,9 @@ const app = getApp();
 Page({
   data: {
     //后台返回的信息数组填充
-    stuInfo:{ username: "",
+    stuInfo:{ 
+  nickName:"",
+  username: "",
     college: "",
     id: "",
     professional: "",
@@ -25,6 +27,8 @@ Page({
             'stuInfo.professional':e.detail.value.professional,
             'stuInfo.phone':e.detail.value.phone
           })
+    console.log(this.globalData.userInfo);
+    
   console.log(this.data.stuInfo);
       wx.request({
         url: 'associatation/'+this.data.stuInfo,

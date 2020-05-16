@@ -4,7 +4,7 @@ Page({
     image: "",
     name: '',
     type: '',
-    chargePerson: '',
+    chargePersons: '',
     phone: '',
     date: '',
     msg: '',
@@ -26,7 +26,7 @@ Page({
 
   chargePersonInput: function (e) {
     this.setData({
-      chargePerson: e.detail.value
+      chargePersons: e.detail.value
     })
   },
   phoneInput: function (e) {
@@ -78,11 +78,12 @@ Page({
       }
     })
   },
+  
   onLoad: function (options) {
     this.setData({
       name: options.name,
       type: options.type,
-      chargePerson: options.chargePerson,
+      chargePersons: options.chargePersons,
       phone: options.phone,
       date: options.date,
       image: options.image,
@@ -92,12 +93,10 @@ Page({
       sponsor: options.sponsor,
       other: options.other
     })
-    console.log(this.data)
   },
 
   submitBtnClick: function () {
-    console.log(this.data)
-    if (this.data.name.length == 0 || this.data.type.length == 0 || this.data.chargePerson.length == 0 || this.data.activity.length == 0 ||
+    if (this.data.name.length == 0 || this.data.type.length == 0 || this.data.chargePersons.length == 0 || this.data.activity.length == 0 ||
       this.data.phone.length == 0 || this.data.date.length == 0 || this.data.sponsor.length == 0 || this.data.other.length == 0 ||
       this.data.recruit.length == 0 || this.data.msg.length == 0 || this.data.image.length == 0
     ) {
@@ -108,12 +107,13 @@ Page({
       })
     } else {
       //提交给后台
+      console.log(this.data);
       wx.request({
-        url: "url", //接口地址
+        url: "http://localhost:8080/association/updateassociation", //接口地址
         data: {
           name: this.data.name,
           type: this.data.type,
-          chargePerson: this.data.chargePerson,
+          chargePersons: this.data.chargePersons,
           phone: this.data.phone,
           date: this.data.date,
           image: this.data.image,
@@ -123,7 +123,6 @@ Page({
           sponsor: this.data.sponsor,
           other: this.data.other
         },
-        method: 'POST',
         success(res) {
           console.log(res.data)
           wx.showToast({
@@ -131,6 +130,10 @@ Page({
             icon: 'none',
             duration: 2000,
           })
+        },
+        fail:(res)=>{
+          console.log('错误');
+          console.log(res);    
         }
       })
     }

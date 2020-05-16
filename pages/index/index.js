@@ -1,63 +1,12 @@
 //index.js
+const app = getApp();
+
 Page({
   data: {
     isSearch: true,
     isClear: false,
-    association: [
-      //后端数据
-      {
-        "name": "工商管理爱好者协会",
-        "type": "学术科技",
-        "chargePerson": "李高",
-        "phone": "15612354512",
-        "date": "2017-01-23",
-        "image": "../../img/shangxie.jpg",
-        "msg": "该社团由。。。。。。牛逼哄哄",
-        "activity": "校级活动。。。",
-        "recruit": "19日开始招募",
-        "sponsor": "没助",
-        "other": "双方都是双方都是远古法u覆盖爱上v阿萨双方都是远古法u覆盖爱上v阿萨双方都是远古法u覆盖爱上v阿萨远古法u覆盖爱上v阿萨"
-      },
-      {
-        "name": "工商协会",
-        "type": "学术",
-        "chargePerson": "李高",
-        "phone": "15612354512",
-        "date": "2017-01-23",
-        "image": "../../img/shangxie.jpg",
-        "msg": "该社团由。。。。。。牛逼哄哄",
-        "activity": "校级活动。。。",
-        "recruit": "19日开始招募",
-        "sponsor": "没有赞助",
-        "other": "妇女节按时发不卡"
-      },
-      {
-        "name": "乒乓球协会",
-        "type": "体育",
-        "chargePerson": "王小欧",
-        "phone": "15612354512",
-        "date": "2018-05-12",
-        "image": "../../img/shangxie.jpg",
-        "msg": "sfdsdf",
-        "activity": "asdsda",
-        "recruit": "19日开始招募",
-        "sponsor": "没有赞助",
-        "other": "妇女节按时发不卡"
-      },
-      {
-        "name": "街舞协会",
-        "type": "体育",
-        "chargePerson": "小明",
-        "phone": "15612354512",
-        "date": "2015-12-03",
-        "image": "../../img/shangxie.jpg",
-        "msg": "sfdsdf",
-        "activity": "asdsda",
-        "recruit": "19日开始招募",
-        "sponsor": "没有赞助",
-        "other": "妇女节按时发不卡"
-      }
-    ],
+    associationinfo: [],
+    userInfo:{},
     searchname: '',
   },
 
@@ -80,21 +29,19 @@ Page({
         }
       ]
     };
-    wx.request({
-      url: 'association/listassociation',
-      success: (res) => {
-        that.setData({
-          //列表数据填充
-          association: res.data.association
-        })
-      }
-
-    })
+     // 所以此处加入 callback 以防止这种情况   
     that.setData({
       lunboData: data.datas
     })
-  },
+    app.associationInfoReadyCallback = function () {
+      that.setData({
+        associationinfo:app.globalData.associationinfo
+      })
+      // that.data.associationinfo = app.globalData.associationinfo
+      console.log(that.data.associationinfo);
 
+    }
+  },
 
   societyInput: function (e) {
     this.setData({
@@ -120,19 +67,33 @@ Page({
   },
   //搜索
   searching:function (e) {
-    var that = this
+    var that = this;
     var searchname = e.currentTarget.dataset.searchname
-    console.log(searchname) 
-    wx.request({
-      url: 'url',
-      success: (res) => {
-        that.setData({
-          //列表数据填充
-          association: res.data.association
-          //刷新页面。。。
-        })
-      }
-    })
+    console.log(searchname);
+    var reg = RegExp(/协会/);
+     if(searchname == ''){
+      return;
+    }else if(!searchname.match(reg)){
+      // 包含     
+      searchname = searchname+'协会'     
+  }
+  wx.request({
+    url: 'http://localhost:8080/association/name',
+    data:{name:searchname},
+    success: (res) => {
+      console.log(res.data);
+      that.setData({
+        //列表数据填充
+        associationinfo: res.data.data
+        //刷新页面。。。
+      })
+    },
+    fail:(res)=>{
+      console.log(错误);
+      
+    }
+  })  
+   
   },
 
   onShareAppMessage: function () {
