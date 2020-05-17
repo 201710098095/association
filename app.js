@@ -21,40 +21,34 @@ App({
             success: res => {
               // 可以将 res 发送给后台解码出 unionId              
               this.globalData.userInfo = res.userInfo
-              console.log(this.globalData.userInfo.nickName);
 
-                //获取学生信息
-                // wx.request({
-                //   url: 'http://localhost:8080/association/listassocation',
-                //   data:this.userInfo.nickname,
-                //   success :(res)=> {
-                //     console.log('获取社团列表成功')
-                //     this.globalData.associationinfo = res.data.data
-                //     //这里有数据了
-                //     if (this.associationInfoReadyCallback) {
-                //       this.associationInfoReadyCallback(res)
-                //     }
-                //   },
-                //   fail:(res)=>{
-                //     console.log(res)
-                //   }
-                // }) 
+               
 
               //获取社团信息
               wx.request({
                 url: 'http://localhost:8080/association/listassocation',
                 method:'GET',
                 success :(res)=> {
-                  console.log('获取社团列表成功')
                   this.globalData.associationinfo = res.data.data
                   //这里有数据了
                   if (this.associationInfoReadyCallback) {
                     this.associationInfoReadyCallback(res)
                   }
                 },
-                fail:(res)=>{
-                  console.log(res)
-                }
+              }) 
+               //获取学生信息
+               wx.request({
+                url: 'http://localhost:8080/user/ListUserByNickname',
+                method:'GET',
+                data:{nickname:getApp().globalData.userInfo.nickName},
+                success :(res)=> {
+                  this.globalData.stuInfo = res.data.data
+                  console.log(this.globalData.stuInfo);   
+                  //这里有数据了
+                  if (this.stuInfoReadyCallback) {
+                    this.stuInfoReadyCallback(res)
+                  }                    
+                },
               }) 
   
               // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -65,11 +59,7 @@ App({
             }
         
           })
-          
-
-        
-
-
+  
         }
       }
     })
@@ -81,13 +71,7 @@ App({
     userInfo: [],
     associationinfo:[],
    //学生信息
-    stuInfo:{
-    id:1,
-    name:'张三',
-    nickName:'LTE',
-    college: '华广',
-    professional: '软件工程',
-    phone: '13546223035'}
+    stuInfo:[]
   },
   
   

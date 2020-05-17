@@ -37,9 +37,6 @@ Page({
       that.setData({
         associationinfo:app.globalData.associationinfo
       })
-      // that.data.associationinfo = app.globalData.associationinfo
-      console.log(that.data.associationinfo);
-
     }
   },
 
@@ -88,10 +85,6 @@ Page({
         //刷新页面。。。
       })
     },
-    fail:(res)=>{
-      console.log(错误);
-      
-    }
   })  
    
   },

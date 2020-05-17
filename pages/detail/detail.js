@@ -1,3 +1,4 @@
+const app = getApp();
 Page({
   data:{
     name:'',//社团名字
@@ -33,23 +34,20 @@ Page({
      path: '../../pages/detail/detail'
     }
    },
-   joinAsso:function(){
-    wx.showModal({      
-      title: '提示',      
-      content: '确定发出加入社团的申请吗？',      
-      success: function (e) {       
-         if (e.confirm) {            
-           // 用户点击了确定  发出后台请求
-           console.log("确定");   
+   joinAsso:function(){     
+    // wx.showModal({      
+      // title: '提示',      
+      // content: '确定发出加入社团的申请吗？',      
+      // success: function (e) {       
+      //    if (e.confirm) {            
+      //      // 用户点击了确定  发出后台请求
+      //      console.log("确定");   
             wx.request({
-            url: 'url', 
-            data: "name",//传用户名申请加入社团
+            url: 'http://localhost:8080/user/userjoin', 
+            data: {uname:app.globalData.stuInfo[0].name,
+              aname:this.data.name
+            },//传用户名申请加入社团
             dataType: 'json',
-            method: 'POST',
-              header: {
-             'custom-header': 'delete',
-              'content-type': 'application/json'
-              },
               success: (res) => {
                 //申请成功
                 wx.showModal({      
@@ -66,5 +64,6 @@ Page({
               console.log('错误');
             }
    })
-  }}})}
+  }
+  // }}})}
 })

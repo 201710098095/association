@@ -2,10 +2,10 @@
 <view class='container'>
 	<view class="box">
 		<view class="ItemView">姓名：
-			<input class="input" placeholder="请输入您的姓名" value='{{stuInfo.username}}' name="username"/>
+			<input class="input" placeholder="请输入您的姓名" value='{{stuInfo.name}}' name="name"/>
 		</view>
-		<view class="ItemView">学号：
-			<input class="input" placeholder="请输入您的学号" value='{{stuInfo.id}}' name='id'/>
+		<view class="ItemView">编号：
+			<input class="input" placeholder="请输入您的学号" value='{{stuInfo.id}}' name='id' />
 		</view>
 		<view class="ItemView">学院：
 			<input class="input" placeholder="请输入您的学院" value='{{stuInfo.college}}' name='college'/>
